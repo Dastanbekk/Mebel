@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <title>Furniture</title>
+</head>
+<body>
+    <!--  -->
+    
+    <nav class="topbar bg-black w-full hidden sm:block">
+        <div class=" py-[12px] w-[90%] m-auto flex justify-between flex-wrap gap-[20px]  text-white" >
+            <div>
+                <ul class="flex gap-[30px]">
+                    <li>
+                        <a href="#">Главная</a>
+                    </li>
+                    <li>
+                        <a href="#">О нас</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul class="flex gap-[30px]">
+                    <li>
+                        <a href="tel:8 (964) 89 99 119">8 (964) 89 99 119</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex"><img src="../assets/svg/car.svg" alt="car">Доставка</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    
+    <!--  -->
+    
+    <nav class="bg-white-800">
+        <div class=" w-[90%] m-auto ">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div class="flex shrink-0 items-center">
+                <img class="h-8 w-auto" src="../assets/images/logo.png" alt="Your Company">
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <!-- <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Dashboard</a>
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">Team</a>
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">Projects</a>
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">Calendar</a> -->
+                    
+                </div>
+              </div>
+              <div class="max-w-[100%] w-full py-[10px] px-[20px] border-2  border-solid  flex gap-[10px] max-sm:hidden">
+                <img src="../assets/svg/search.svg" alt="search">
+                <input class="outline-none " placeholder="Search" type="search">
+            </div>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <button type="button" class="relative rounded-full bg-gray-800 p-2 mr-3 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 max-sm:hidden">
+                    <span class="absolute -inset-1.5"></span>
+                    <span class="sr-only">View notifications</span>
+                    <img  src="../assets/svg/like.svg" alt="">
+                  </button>
+              <button type="button" class="relative rounded-full bg-gray-800 p-2 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 max-sm:hidden">
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">View notifications</span>
+                <img  src="../assets/svg/lock.svg" alt="">
+              </button>
+      
+              <!-- Profile dropdown -->
+              <div class="relative ml-3">
+                <div>
+                  <button type="button" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                    <span class="absolute -inset-1.5"></span>
+                    <span class="sr-only">Open user menu</span>
+                    <img class="size-8 rounded-full" src="../assets/svg/user.svg" alt="">
+                  </button>
+                </div>
+      
+                <!--
+                  Dropdown menu, show/hide based on menu state.
+      
+                  Entering: "transition ease-out duration-100"
+                    From: "transform opacity-0 scale-95"
+                    To: "transform opacity-100 scale-100"
+                  Leaving: "transition ease-in duration-75"
+                    From: "transform opacity-100 scale-100"
+                    To: "transform opacity-0 scale-95"
+                -->
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+          </div>
+        </div>
+      </nav>
+      
+      <!--  -->
+
+      <nav class="bg-white border-2 w-[90%] m-auto py-[23px] px-[40px] mt-[20px]   ">
+        <div class="flex justify-between flex-wrap w-full space-x-4">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#" class=" flex gap-[5px] rounded-md  px-3 py-2 text-sm font-medium text-black "> <img src="../assets/svg/nav1.svg" alt="">Кухни</a>
+            <a href="#" class=" flex gap-[5px] rounded-md  px-3 py-2 text-sm font-medium text-black "> <img src="../assets/svg/nav1.svg" alt="">Спальни</a>
+            <a href="#" class=" flex gap-[5px] rounded-md  px-3 py-2 text-sm font-medium text-black "> <img src="../assets/svg/nav1.svg" alt="">Гостинные</a>
+            <a href="#" class=" flex gap-[5px] rounded-md  px-3 py-2 text-sm font-medium text-black "> <img src="../assets/svg/nav1.svg" alt="">Прихожие</a>
+            <a href="#" class=" flex gap-[5px] rounded-md  px-3 py-2 text-sm font-medium text-black "> <img src="../assets/svg/nav1.svg" alt="">Офисная мебель</a>
+            <a href="#" class=" flex gap-[5px] rounded-md  px-3 py-2 text-sm font-medium text-black "> <img src="../assets/svg/nav1.svg" alt="">Детская</a>
+            <a href="#" class=" flex gap-[5px] rounded-md  px-3 py-2 text-sm font-medium text-[red] "> Акция</a>
+            <!-- <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black ">Team</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black ">Projects</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black ">Calendar</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black ">Team</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black ">Projects</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black ">Calendar</a> -->
+          </div>
+      </nav>
+
+      <div class="hero w-[90%] m-auto ">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active ">
+                <div class="bg-[url('../assets/images/hero.png')] bg-cover h-[80vh] w-[100%] m-auto  bg-no-repeat relative">
+                    <div class=" absolute top-[30%] left-[150px] flex flex-col gap-[20px]">
+                        <h3 class="font-display text-[50px] w-[200px] font-bold">LOFT
+                            МЕБЕЛЬ</h3>
+                            <p class="text-[#343434] letter-[10px]">Современная и удобная мебель в Анапе</p>
+                            <div>
+                            <button class="py-[12px] px-[24px] bg-white ">СМОТРЕТЬ КАТАЛОГ</button>
+                            </div>
+                        </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="bg-[url('../assets/images/hero.png')] bg-cover h-[80vh] w-[100%] m-auto  bg-no-repeat relative">
+                    <div class=" absolute top-[30%] left-[150px] flex flex-col gap-[20px]">
+                        <h3 class="font-display text-[50px] w-[200px] font-bold">LOFT
+                            МЕБЕЛЬ</h3>
+                            <p class="text-[#343434] letter-[10px]">Современная и удобная мебель в Анапе</p>
+                            <div>
+                            <button class="py-[12px] px-[24px] bg-white ">СМОТРЕТЬ КАТАЛОГ</button>
+                            </div>
+                        </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="bg-[url('../assets/images/hero.png')] bg-cover h-[80vh] w-[100%] m-auto  bg-no-repeat relative">
+                    <div class=" absolute top-[30%] left-[150px] flex flex-col gap-[20px]">
+                        <h3 class="font-display text-[50px] w-[200px] font-bold">LOFT
+                            МЕБЕЛЬ</h3>
+                            <p class="text-[#343434] letter-[10px]">Современная и удобная мебель в Анапе</p>
+                            <div>
+                            <button class="py-[12px] px-[24px] bg-white ">СМОТРЕТЬ КАТАЛОГ</button>
+                            </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      </div>
+
+      <div class="cards py-[30px] w-[90%] m-auto">
+        <div>
+            <h3>Хиты продаж</h3>
+        </div>
+        <div class="mt-[35px] flex flex-wrap justify-center gap-[20px]">
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+            <div class="cardss rounded-4 inline-block py-[20px] px-[35px] cursor-pointer hover:shadow-xl">
+                <div class="flex justify-end ">
+                    <img src="../assets/svg/like-black.svg" alt="like">
+                </div>
+                <div class="mt-[28px]">
+                    <img src="../assets/images/chair.png" alt="chair">
+                </div>
+                <div class="mt-[50px] flex flex-col gap-[8px]">
+                    <h3 class="font-roboto font-medium ">Валенсия Beige</h3>
+                    <p>Двухспальные кровати</p>
+                    <p class="text-[#414141] font-medium font-roboto">21 990₽</p>
+                </div>
+            </div>
+        </div>
+      </div>
+
+
+      <footer class="py-[64px] shadow-2xl">
+        <div class="w-[90%] m-auto flex justify-between flex-wrap">
+            <h3>НАВИГАЦИЯ</h3>
+            <h3 class="font-bold text-[30px]">LM</h3>
+        </div>
+        <div class=" mt-3  m-auto w-[90%] flex justify-between items-center flex-wrap gap-[15px]">
+            <div class="flex flex-col sm:flex-row gap-[30px]">
+                <div class="flex flex-col gap-[8px]">
+                    <a href="#">Кухни</a>
+                    <a href="#">Спальни</a>
+                    <a href="#">Гостинные</a>
+                </div>
+                <div class="flex  flex-col  gap-[8px]">
+                    <a href="#">Прихожие</a>
+                    <a href="#">Офисная мебель</a>
+                    <a href="#">Детская</a>
+                </div>
+                <div class="flex flex-col gap-[8px]">
+                    <a href="#">Шкафы
+                        
+                        </a>
+                    <a href="#">Матрасы</a>
+                    <a href="#">Мягкая мебель</a>
+                </div>
+            </div>
+            <p>
+                г. Анапа, Анапское шоссе,
+                <br>
+                30 Ж/К Черное море
+
+            </p>
+        </div>
+        <div class="mt-5 w-[90%] m-auto  flex justify-between flex-wrap gap-[20px]">
+            <div class="flex gap-3">
+                <a href="#" class="text-[red]">Акция</a>
+                <a href="#">Новинки</a>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-[30px]">
+                <a class="flex gap-3" href="tel:8 (964) 89 99 119"> <img src="../assets/svg/tel.svg" alt="tel"> 8 (964) 89 99 119</a>
+                <a class="flex gap-3" href="#"> <img src="../assets/svg/insta.svg" alt=""> INSTAGRAM</a>
+                <a class="flex gap-3" href="mailto:mebel_loft_anapa@mail.ru"> <img src="../assets/svg/message.svg" alt=""> mebel_loft_anapa@mail.ru</a>
+            </div>
+        </div>
+      </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
